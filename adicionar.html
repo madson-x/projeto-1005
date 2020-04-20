@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação PWA - Agenda</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo-site">
+            <img src="img/logo_sm_default.png" alt="">
+        </div>
+    </header>
+
+    <div class="container" id="cadMeta" style="margin-top:40px">
+        <h4>Cadastrar metas.</h4>
+        <form id="inserir">
+            <div class="form-group">
+                <label>Título da meta</label> <br>
+                <input type="text" class="form-control" id="titulo" name="nomeM" placeholder="Defina um título para a atividade." style="left: auto;" required autocomplete="off" required>
+                
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Descrição da meta</label> <br>
+                <textarea name="descM" id="descM" cols="30" rows="5" placeholder="Descreva com detalhes o que pretende fazer."></textarea>
+                <!-- <input type="text" class="form-control" name="descM" placeholder="Descreva com detalhes o que pretende fazer." required autocomplete="off" required> -->
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Data limite de conclusão da meta: </label> <br>
+                <input type="date" class="form-control" name="dateM" placeholder="D / M / A." required autocomplete="off" required>
+            </div>
+            <br>
+            <div id="form_add">
+                <button type="submit" id="btnCad" class="btn btn-sm btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </form>
+                    <form action="index.html">
+                        <button>Voltar</button>
+                    </form>
+    </div>
+
+
+    <script src="/js/comandos.js"></script>
+</body>
+<footer class="rodape">
+    <p> MDX Soft</p> <img src="/img/favicon.png" alt=""><a href="">Sobre o Projeto</a>
+    <p>Todos os direitos reservados.</p>
+</footer>
+
+</html>
