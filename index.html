@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+    <meta name="theme-color" content="#f9f9f9">
+    <link rel="apple-touch-icon" href="/img/favicon_1.jpg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="canonical" href="https://minhalistapwa.herokuapp.com/">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicação PWA - Agenda</title>
@@ -10,6 +16,19 @@
 </head>
 
 <body class="container">
+
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/sw.js')
+            .then(function(){
+                con.console.log('service worker registered');
+            })
+            .catch(function(){
+                console.warn('service worker failed');
+            });
+        }
+    </script>
+
     <div class="msg-alerta">
     </div>
 
