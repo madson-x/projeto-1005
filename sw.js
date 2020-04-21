@@ -24,7 +24,6 @@ self.addEventListener('install', function (event) {
                 '/manifest.json',
                 '/sw.js',
                 '/index.html',
-                '/vendor.js',
             ]);
         })
     )

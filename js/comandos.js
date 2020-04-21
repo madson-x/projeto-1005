@@ -22,20 +22,17 @@ function Aviso(t) {
 
 
 function Incluir() {
-    // Selecionamos os dados dos inputs do formulario
+    // Selecionamos os dados dos inputs do formulario.
     var dados = JSON.stringify({
         Titulo: $("#titulo").val(),
         Descricao: $("#descricao").val(),
         Data_Inicio: $("#dateIni").val(),
         Data_Termino: $("#dateFin").val(),
     });
-
-    dbMetas.push(dados); // Armazenar os dados no array definido globalmente
-    localStorage.setItem("dbMetas", JSON.stringify(dbMetas));
-
-    ListarMetas();
-
-    return Aviso(1);
+    dbMetas.push(dados); // Armazenar os dados no array definido globalmente.
+    localStorage.setItem("dbMetas", JSON.stringify(dbMetas)); //armazena no localstorage a atividade.
+    ListarMetas(); // Chama a função de carregar o formulário na home.
+    return Aviso(1); // Informa o usuário o resultado da inclusão.
 }
 
 function ListarMetas() {
@@ -89,23 +86,22 @@ function contMetas() {
     return nmetas;
 }
 
-function Eliminar(e) {
+function Eliminar(e) {  // Captura a posição no formulario a atividade a ser excluída.
     dbMetas.splice(e, 1); 
-    localStorage.setItem("dbMetas", JSON.stringify(dbMetas));
-    return Aviso(2);
+    localStorage.setItem("dbMetas", JSON.stringify(dbMetas)); //Exclui a atividade na local Storage.
+    return Aviso(2); //Retorna o aviso da atividade excluída;
 }
 
 function Editar() {
-    dbMetas[indice_selecionado] = JSON.stringify({
-        Titulo: $("#titulo").val(),
-        Descricao: $("#descricao").val(),
-        Data_Inicio: $("#dateIni").val(),
-        Data_Termino: $("#dateFin").val(),
+    dbMetas[indice_selecionado] = JSON.stringify({ //Captura o indice selecionado da atividade a ser editada.
+        Titulo: $("#titulo").val(),         //Carrega os cados no formulário para a edição.
+        Descricao: $("#descricao").val(),   // ""
+        Data_Inicio: $("#dateIni").val(),   // ""
+        Data_Termino: $("#dateFin").val(),  // ""
     });
-    localStorage.setItem("dbMetas", JSON.stringify(dbMetas));
+    localStorage.setItem("dbMetas", JSON.stringify(dbMetas)); // Após atualizado é inserido os dados na mesma posição já armazenada.
     opcao = "A";
     return true;
-
 }
 
 $(".btnEliminar").bind("click", function () {

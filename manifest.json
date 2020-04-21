@@ -1,4 +1,5 @@
 {
+  "manifest_version": 2,
   "name": "Minha Lista",
   "short_name": "Minha Lista",
   "theme_color": "rgba(243,216,33,0.9)",
