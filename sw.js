@@ -5,10 +5,25 @@ self.addEventListener('install', function (event) {
         caches.open(CACHE_NAME).then(function (cache) {
             return cache.addAll([
                 '/',
-                '/index.html',
                 '/css/estilos.css',
-                '/app.js',
-                '/manifest.js',
+                '/images/icon-72x72.png',
+                '/images/icon-96x96.png',
+                '/images/icon-128x128.png',
+                '/images/icon-144x144.png',
+                '/images/icon-152x152.png',
+                '/images/icon-192x192.png',
+                '/images/icon-384x384.png',
+                '/images/icon-512x512.png',
+                '/img/faviicon_1.jpg',
+                '/img/faviicon.jpg',
+                '/img/logo_l_default.jpg',
+                '/img/logo_l_device.jpg',
+                '/img/logo_sm_device.jpg',
+                '/js/comandos.js',
+                '/adicionar.html',
+                '/manifest.json',
+                '/sw.js',
+                '/index.html',
                 '/vendor.js',
             ]);
         })
